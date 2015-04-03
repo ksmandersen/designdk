@@ -2,16 +2,17 @@
 
 <div class="main-container cont">
 	<section class="main int" role="main">
+		{{{ img "logo.png" }}}
 		<h1><span class="hashtag"></span> designdk</h1>
 		<p class="tagline">Dansk slack community for designere. Kom indenfor.</p>
 
 		<form id="signupform" method="POST">
 			<div class="email">
-				<label for="email">Din email</label>
-				<input type="email" name="email" value="" placeholder="">
+				<label for="email" id="email_label">Din email</label>
+				<input type="email" id="email" name="email" value="" placeholder="">
 				<div class="clearboth"></div>
 			</div>
-			<input type="submit" class="submit" name="submit" value="Få din invite">
+			<input type="submit" class="submit" id="submit" name="submit" value="Få din invite">
 		</form>
 	</section>
 </div>

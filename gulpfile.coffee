@@ -33,7 +33,7 @@ config = {
 }
 
 site = {
-	title: "Startover",
+	title: "#designdk ~ Kom indenfor",
 	description: "designdk ~ Dansk slack community for designere. Kom indenfor.",
 	keywords: "slack,design,designere,community,chat,invite"
 	url: "http://design.dk",
@@ -93,7 +93,8 @@ gulp.task 'jsvendor', ->
 	gulp.src(paths.js)
 		.pipe(sourcemaps.init())
 		.pipe(order([
-			'jquery.js'
+			'retina.js'
+			'jquery.js',
 		]))
 		.pipe(concat('vendor.js'))
 		.pipe(gif(config.production, uglify()))
@@ -157,7 +158,7 @@ gulp.task 'html', ->
 			img: (path, retina = true, cls = null) ->
 				rp = retinaPath(path)
 				str = "<img src=\"#{config.imgpath}/#{path}\""
-				str += " data-at2x=\"#{rp}\"" if retina
+				str += " data-at2x=\"#{config.imgpath}/#{rp}\"" if retina
 				str += " class=\"#{cls}\"" if typeof cls == 'string'
 				str += ">"
 

@@ -29,6 +29,9 @@ update:
 build:
 	gulp cleanbuild
 
+release:
+	gulp release
+
 watch:
 	gulp
 
