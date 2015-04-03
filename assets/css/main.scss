@@ -137,3 +137,10 @@ body {
 .shake {
   @include animation-name(shake);
 }
+
+
+@include media(max-width 420px) {
+	.main {
+		padding-top: 30px;
+	}
+}
